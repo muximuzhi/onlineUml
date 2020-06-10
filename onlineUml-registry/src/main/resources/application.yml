@@ -1,0 +1,16 @@
+server:
+  port: 10080
+
+spring:
+  application:
+    name: onlineWeb-
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10080/eureka
+    register-with-eureka: false  # 不注册到eureka
+    fetch-registry: false  # 不拉取服务
+  server:
+    eviction-interval-timer-in-ms: 10000  # 自动清理间隔10ms
+    enable-self-preservation: false  # 关闭自动防御
